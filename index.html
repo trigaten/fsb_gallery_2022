@@ -1,6 +1,15 @@
 ---
 ---
+<style>
+    div {
+  cursor: pointer
+}
 
+iframe {
+  pointer-events: none;
+}
+
+</style>
 <div class="container-fluid">
     <div class="row">
         {% for link in site.data.links %}
@@ -8,11 +17,11 @@
             <iframe src="{{link.link}}" frameborder="0"></iframe>
         </div> -->
         <div class="col-4  text-center" style="margin-left: -50px;">
-            <div style="direction: rtl;">
-                <a href="{{link.link}}">
+            <div style="direction: rtl;" onClick="">
                     <iframe src="{{link.link}}" style="transform: scale(0.28,0.28) translate(1258px,-865px);width: 1000px;height: 700px;border-radius: 50px;" ></iframe>
-                </a>
-            </div>
+                    <a href="{{link.link}}" style="position:absolute; top:0; left:0; display:inline-block; width:1000px; height:700px; z-index:5;"></a>
+
+                </div>
             <!-- <iframe width="1024" height="768" src="http://www.bbc.com" style="-webkit-transform:scale(0.1);-moz-transform-scale:(0.1);"></iframe> -->
 
         </div>
