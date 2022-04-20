@@ -1,32 +1,24 @@
 ---
 ---
 <style>
-    div {
-  cursor: pointer
-}
 
-iframe {
-  pointer-events: none;
-}
 
+*{
+    /* border: 1px solid black; */
+}
 </style>
-<div class="container-fluid">
+<div class="container-fluid pt-5" style="background-color:brown;">
     <div class="row">
         {% for link in site.data.links %}
-        <!-- <div class="col-4 text-center" style="height: 400px;">
-            <iframe src="{{link.link}}" frameborder="0"></iframe>
-        </div> -->
-        <div class="col-4  text-center" style="margin-left: -50px;">
-            <div style="direction: rtl;" onClick="">
-                    <iframe src="{{link.link}}" style="transform: scale(0.28,0.28) translate(1258px,-865px);width: 1000px;height: 700px;border-radius: 50px;" ></iframe>
-                    <a href="{{link.link}}" style="position:absolute; top:0; left:0; display:inline-block; width:1000px; height:700px; z-index:5;"></a>
 
-                </div>
-            <!-- <iframe width="1024" height="768" src="http://www.bbc.com" style="-webkit-transform:scale(0.1);-moz-transform-scale:(0.1);"></iframe> -->
-
+        <div class="col-4 text-center" style="height: 300px;">
+            <div style="direction: rtl;height: 200px;margin-left: 50px" onClick="">
+                <iframe src="{{link.link}}" style="transform: scale(0.28,0.28) translate(1058px,-895px); width: 1000px;height: 700px;border: 1px solid black;;" ></iframe>
+            </div>
+            <div class="text-center" style="height: 100px;">
+                <a href="{{link.link}}" style="color: black;"><h3>Click to Visit Site →</h3></a>
+            </div>
         </div>
-
         {% endfor %}
-
     </div>
 </div>
